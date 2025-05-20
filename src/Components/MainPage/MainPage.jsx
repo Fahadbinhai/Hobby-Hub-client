@@ -17,7 +17,7 @@ const MainPage = () => {
                 </main>
 
                 <footer>
-                    <Footer></Footer>
+                    {/* <Footer></Footer> */}
                 </footer>
 
 
