@@ -1,16 +1,19 @@
 import React from 'react';
 import logo from '../../assets/images/hobby-hub-logo.png'
-import { Link } from 'react-router';
+import { NavLink } from 'react-router';
 
 const Header = () => {
 
 
     const links = <>
 
-        <Link className={({ isActive }) => isActive ? " text-blue-700 underline" : ""}> Home </Link>
-        <Link className={({ isActive }) => isActive ? " text-blue-700 underline" : ""}> All Groups </Link>
-        <Link className={({ isActive }) => isActive ? " text-blue-700 underline" : ""}> Create Group </Link>
-        <Link className={({ isActive }) => isActive ? " text-blue-700 underline" : ""}> My Groups</Link>
+        <NavLink to='/' className={({isActive})=> isActive?" underline text-blue-700" : ""}>Home</NavLink>
+
+        <NavLink to='/hello' className={({isActive})=> isActive?"text-blue-700 underline" : ""}>All Groups</NavLink>
+
+        <NavLink to='/new-hobby-group' className={({isActive})=> isActive?"text-blue-700 underline" : ""}>Create Groups</NavLink>
+
+        <NavLink to='/hello2' className={({isActive})=> isActive? "text-blue-700 underline" : ""}>My Groups</NavLink>
 
 
     </>

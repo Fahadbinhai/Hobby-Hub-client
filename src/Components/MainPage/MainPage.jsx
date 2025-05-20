@@ -5,22 +5,24 @@ import { Outlet } from 'react-router';
 
 const MainPage = () => {
     return (
-        <div className='lg:mx-[50px] my-5'>
+        <section className=' bg-[#F0F9FF]'>
+            <div className='lg:mx-[50px] py-5'>
 
-            <header>
-                <Header></Header>
-                
-            </header>
-            <main>
-                <Outlet></Outlet>
-            </main>
+                <header>
+                    <Header></Header>
 
-            <footer>
-            <Footer></Footer>
-            </footer>
+                </header>
+                <main>
+                    <Outlet></Outlet>
+                </main>
+
+                <footer>
+                    <Footer></Footer>
+                </footer>
 
 
-        </div>
+            </div>
+        </section>
     );
 };
 

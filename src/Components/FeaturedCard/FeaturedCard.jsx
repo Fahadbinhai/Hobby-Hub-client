@@ -1,13 +1,14 @@
 import React from 'react';
+import { Link } from 'react-router';
 
-const FeaturedCard = ({feature}) => {
+const FeaturedCard = ({ feature }) => {
 
-    const {coverImage,title,location,shortDescription} = feature
-    
+    const { id, coverImage, title, location, shortDescription } = feature
+
 
 
     return (
-        <div className="card bg-base-100 w-[400px] mx-auto shadow-sm">
+        <Link to={`feature-details/${id}`} className="card bg-[#FFF7ED] w-[400px] lg:w-[500px] lg:h-[350px] mx-auto shadow-sm">
             <figure>
                 <img
                     src={coverImage}
@@ -17,11 +18,9 @@ const FeaturedCard = ({feature}) => {
                 <h2 className="card-title"> {title} </h2>
                 <p> Location: {location} </p>
                 <p> Info: {shortDescription} </p>
-                {/* <div className="card-actions justify-end">
-                    <button className="btn btn-primary">Buy Now</button>
-                </div> */}
+
             </div>
-        </div>
+        </Link>
     );
 };
 
