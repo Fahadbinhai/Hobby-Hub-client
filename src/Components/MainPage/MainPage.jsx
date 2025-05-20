@@ -2,7 +2,6 @@ import React from 'react';
 import Header from '../Header/Header';
 import Footer from '../Footer/Footer';
 import { Outlet } from 'react-router';
-import Sliders from '../Slider/Sliders';
 
 const MainPage = () => {
     return (
@@ -10,7 +9,7 @@ const MainPage = () => {
 
             <header>
                 <Header></Header>
-                <Sliders></Sliders>
+                
             </header>
             <main>
                 <Outlet></Outlet>
