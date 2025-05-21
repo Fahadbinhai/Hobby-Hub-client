@@ -97,6 +97,45 @@ const HomePage = () => {
                     </div>
                 </div>
             </div>
+
+
+            {/* Static section 2 */}
+
+            <div>
+                <h3 className='font-bold text-2xl m-4'>A Quick Glance at Our Journey</h3>
+                <div className='grid grid-cols-1 lg:grid-cols-4'>
+                    <div className="card bg-[#FFF7ED] text-black w-96 border mx-auto">
+                        <div className="card-body">
+                            <h2 className="card-title"> Total Hobby Groups</h2>
+                            <p className='font-bold text-5xl m-4'>120+</p>
+                            <p>Created by users</p>
+
+                        </div>
+                    </div>
+                    <div className="card bg-[#FFF7ED] text-black w-96 border mx-auto">
+                        <div className="card-body">
+                            <h2 className="card-title"> Active Members</h2>
+                            <p className='font-bold text-5xl m-4'>1020+</p>
+                            <p>	Who joined different groups</p>
+                        </div>
+                    </div>
+                    <div className="card bg-[#FFF7ED] text-black w-96 border mx-auto">
+                        <div className="card-body">
+                            <h2 className="card-title"> Event Hosted</h2>
+                            <p className='font-bold text-5xl m-4'>90+</p>
+                            <p>	Offline/Online hobby meetups</p>
+                        </div>
+                    </div>
+                    <div className="card bg-[#FFF7ED] text-black w-96 border mx-auto">
+                        <div className="card-body">
+                            <h2 className="card-title"> Hobbies Covered</h2>
+                            <p className='font-bold text-5xl m-4'>20+</p>
+                            <p>	Different categories on the platform</p>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     );
 };
