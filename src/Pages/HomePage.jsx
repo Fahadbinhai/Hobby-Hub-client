@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { Suspense, useEffect, useState } from 'react';
 import Sliders from '../Components/Slider/Sliders';
 import FeaturedCard from '../Components/FeaturedCard/FeaturedCard';
 import { Link } from 'react-router';
@@ -28,7 +28,11 @@ const HomePage = () => {
                 <div className='grid grid-cols-1 lg:grid-cols-3 gap-4 my-5 lg:ml-8 '>
 
                     {
-                        featured.map(feature => <FeaturedCard key={feature.id} feature={feature}></FeaturedCard>)
+                        featured.map(feature => (
+                            <Suspense fallback={<span className="loading loading-dots loading-xl"></span>}>
+                                <FeaturedCard key={feature.id} feature={feature}></FeaturedCard>
+                            </Suspense>
+                        ))
                     }
                 </div>
             </div>
@@ -103,7 +107,7 @@ const HomePage = () => {
 
             <div>
                 <h3 className='font-bold text-2xl m-4'>A Quick Glance at Our Journey</h3>
-                <div className='grid grid-cols-1 lg:grid-cols-4'>
+                <div className='grid grid-cols-1 lg:grid-cols-4 gap-4'>
                     <div className="card bg-[#FFF7ED] text-black w-96 border mx-auto">
                         <div className="card-body">
                             <h2 className="card-title"> Total Hobby Groups</h2>

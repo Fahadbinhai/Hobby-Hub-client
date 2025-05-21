@@ -6,6 +6,7 @@ import MainPage from './MainPage/MainPage';
 import HomePage from '../Pages/HomePage';
 import FeatureDetails from '../Pages/FeatureDetails/FeatureDetails';
 import CreateHobbyGroup from '../Pages/CreateHobbyGroup/CreateHobbyGroup';
+import AllGroups from '../Pages/AllGroups/AllGroups';
 
 const router = createBrowserRouter([
   {
@@ -24,6 +25,10 @@ const router = createBrowserRouter([
       {
         path: 'new-hobby-group',
         Component: CreateHobbyGroup
+      },
+      {
+        path: 'all-group',
+        Component:AllGroups
       }
     ]
   },

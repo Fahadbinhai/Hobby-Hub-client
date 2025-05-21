@@ -9,7 +9,7 @@ const Header = () => {
 
         <NavLink to='/' className={({isActive})=> isActive?" underline text-blue-700" : ""}>Home</NavLink>
 
-        <NavLink to='/hello' className={({isActive})=> isActive?"text-blue-700 underline" : ""}>All Groups</NavLink>
+        <NavLink to='/all-group' className={({isActive})=> isActive?"text-blue-700 underline" : ""}>All Groups</NavLink>
 
         <NavLink to='/new-hobby-group' className={({isActive})=> isActive?"text-blue-700 underline" : ""}>Create Groups</NavLink>
 
