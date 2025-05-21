@@ -20,7 +20,7 @@ const router = createBrowserRouter([
       {
         path: 'feature-details/:id',
         Component: FeatureDetails,
-        loader: () => fetch('/dummyData.json')
+        loader: ({ params }) => fetch(`http://localhost:3000/hobbies/${params.id}`)
       },
       {
         path: 'new-hobby-group',
@@ -28,7 +28,8 @@ const router = createBrowserRouter([
       },
       {
         path: 'all-group',
-        Component:AllGroups
+        Component: AllGroups,
+        loader: () => fetch('http://localhost:3000/hobbies')
       }
     ]
   },

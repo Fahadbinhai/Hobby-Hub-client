@@ -8,10 +8,10 @@ const HomePage = () => {
 
     const [featured, setFeatured] = useState([]);
 
-    // console.log(featured)
+    console.log(featured)
 
     useEffect(() => {
-        fetch('/dummyData.json')
+        fetch('http://localhost:3000/hobbies')
             .then(res => res.json())
             .then(data => setFeatured(data))
     }, [])
@@ -30,7 +30,7 @@ const HomePage = () => {
                     {
                         featured.map(feature => (
                             <Suspense fallback={<span className="loading loading-dots loading-xl"></span>}>
-                                <FeaturedCard key={feature.id} feature={feature}></FeaturedCard>
+                                <FeaturedCard key={feature._id} feature={feature}></FeaturedCard>
                             </Suspense>
                         ))
                     }

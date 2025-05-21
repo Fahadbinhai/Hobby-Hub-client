@@ -1,29 +1,15 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
+import { useLoaderData } from 'react-router';
 
 const AllGroups = () => {
 
-    // const [localData, setLocalData] = useState([]);
-    // const [dbData, setDbData] = useState([]);
-
-
-    // fetching local data
-
-    useEffect(()=>{
-        fetch('/dummyData.json')
-        .then(res=>res.json())
-        .then(data=>console.log(data))
-    },[])
-
-    // fetching data from the database
-
-    useEffect(()=>{},[])
-
-
+    const allData = useLoaderData();
+    console.log(allData)
 
 
     return (
         <div>
-            hello from AllGroups
+            
         </div>
     );
 };

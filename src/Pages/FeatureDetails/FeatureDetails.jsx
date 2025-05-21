@@ -4,16 +4,15 @@ import moment from 'moment';
 
 const FeatureDetails = () => {
 
-    const allData = useLoaderData();
-    const { id } = useParams();
+    const { _id } = useParams();
 
-    const singleData = allData.find(data => data.id == id);
+    const singleData = useLoaderData();
 
-    const { coverImage, title, location, details, lastJoinDate, category } = singleData
+    const { name, photo, meeting, description, lastDate, members,start,user,email } = singleData
 
     console.log(singleData)
 
-    const isExpired = moment().isAfter(moment(lastJoinDate));
+    const isExpired = moment().isAfter(moment(lastDate, "DD-MM-YYYY"));
 
 
 
@@ -22,15 +21,18 @@ const FeatureDetails = () => {
         <div className="card bg-base-100 w-[400px] mx-auto my-20 shadow-sm">
             <figure>
                 <img
-                    src={coverImage}
+                    src={photo}
                     alt="Hobby" />
             </figure>
             <div className="card-body">
-                <h2 className="card-title"> {title} </h2>
-                <p> Category: {category} </p>
-                <p> Location: {location} </p>
-                <p> Details: {details} </p>
-                <p className='text-red-600'> Last Join Date: {lastJoinDate} </p>
+                <h2 className="card-title"> {name} </h2>
+                <p> Maximum Members: {members} </p>
+                <p> Location: {meeting} </p>
+                <p> Details: {description} </p>
+                <p> Created By: {user} </p>
+                <p> Email: {email} </p>
+                <p> Created on: {start} </p>
+                <p className='text-red-600'> Last Join Date: {lastDate} </p>
 
                 <div className="card-actions justify-end">
                     {!isExpired ? (
