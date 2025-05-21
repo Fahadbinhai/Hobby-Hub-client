@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import Sliders from '../Components/Slider/Sliders';
 import FeaturedCard from '../Components/FeaturedCard/FeaturedCard';
 import { Link } from 'react-router';
+import { FaHandPointRight } from "react-icons/fa";
 
 const HomePage = () => {
 
@@ -43,10 +44,58 @@ const HomePage = () => {
 
                         <h3 className='text-center font-light text-3xl mb-4 text-blue-400'>Create your own Hobby group</h3>
                         <button className="btn btn-dash btn-info w-full h-20 text-4xl font-normal">Create</button>
-                        
+
                     </div>
                 </Link>
 
+            </div>
+
+            {/* bg-[#FFF7ED] */}
+
+            {/* static section 1 */}
+            <h3 className='font-bold text-2xl m-4'>Hobbies in Categories</h3>
+            <div className='grid grid-cols-1 lg:grid-cols-4 '>
+
+                <div className="card bg-[#FFF7ED] text-black w-96 border mx-auto mb-4">
+                    <div className="card-body">
+                        <h2 className="card-title"> Creative Hobbies</h2>
+                        <p className='flex items-center gap-2'> <FaHandPointRight /> Drawing & Painting</p>
+                        <p className='flex items-center gap-2' > <FaHandPointRight /> Photography</p>
+                        <p className='flex items-center gap-2' ><FaHandPointRight />Writing</p>
+                        <p className='flex items-center gap-2' ><FaHandPointRight />Calligraphy</p>
+
+                    </div>
+                </div>
+                <div className="card bg-[#FFF7ED] text-black w-96 border mx-auto mb-4">
+                    <div className="card-body">
+                        <h2 className="card-title"> Music & Performing Arts</h2>
+                        <p className='flex items-center gap-2' > <FaHandPointRight /> Playing Guitar</p>
+                        <p className='flex items-center gap-2' > <FaHandPointRight /> Singing</p>
+                        <p className='flex items-center gap-2' > <FaHandPointRight /> Dancing</p>
+                        <p className='flex items-center gap-2' > <FaHandPointRight /> Acting</p>
+
+                    </div>
+                </div>
+                <div className="card bg-[#FFF7ED] text-black w-96 border mx-auto mb-4">
+                    <div className="card-body">
+                        <h2 className="card-title"> Intellectual Hobbies</h2>
+                        <p className='flex items-center gap-2' > <FaHandPointRight /> Reading Books</p>
+                        <p className='flex items-center gap-2' > <FaHandPointRight /> Chess</p>
+                        <p className='flex items-center gap-2' > <FaHandPointRight /> Coding</p>
+                        <p className='flex items-center gap-2' > <FaHandPointRight /> Learning Language</p>
+
+                    </div>
+                </div>
+                <div className="card bg-[#FFF7ED] text-black w-96 border mx-auto">
+                    <div className="card-body">
+                        <h2 className="card-title"> Health & Wellness</h2>
+                        <p className='flex items-center gap-2' > <FaHandPointRight /> Yoga</p>
+                        <p className='flex items-center gap-2' > <FaHandPointRight /> Gym</p>
+                        <p className='flex items-center gap-2' > <FaHandPointRight /> Running</p>
+                        <p className='flex items-center gap-2' > <FaHandPointRight /> Hiking</p>
+
+                    </div>
+                </div>
             </div>
         </div>
     );
