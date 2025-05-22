@@ -9,7 +9,7 @@ const AllGroups = () => {
 
 
     return (
-        <div className='grid grid-cols-1 lg:grid-cols-3 gap-7 m-10'>
+        <div className='grid grid-cols-1 lg:grid-cols-3 gap-7 mt-5 lg:m-10'>
             {
                 allData.map(data => (
                     <Suspense key={data._id} fallback={<span className="loading loading-dots loading-xl"></span>}>

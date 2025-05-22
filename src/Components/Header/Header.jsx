@@ -1,22 +1,26 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import logo from '../../assets/images/hobby-hub-logo.png'
-import { NavLink } from 'react-router';
+import { Link, NavLink } from 'react-router';
+import { AuthContext } from '../ContextProvider/ContextProvider';
 
 const Header = () => {
 
+    const { user, logout } = useContext(AuthContext)
 
     const links = <>
 
-        <NavLink to='/' className={({isActive})=> isActive?" underline text-blue-700" : ""}>Home</NavLink>
+        <NavLink to='/' className={({ isActive }) => isActive ? " underline text-blue-700" : ""}>Home</NavLink>
 
-        <NavLink to='/all-group' className={({isActive})=> isActive?"text-blue-700 underline" : ""}>All Groups</NavLink>
+        <NavLink to='/all-group' className={({ isActive }) => isActive ? "text-blue-700 underline" : ""}>All Groups</NavLink>
 
-        <NavLink to='/new-hobby-group' className={({isActive})=> isActive?"text-blue-700 underline" : ""}>Create Groups</NavLink>
+        <NavLink to='/new-hobby-group' className={({ isActive }) => isActive ? "text-blue-700 underline" : ""}>Create Groups</NavLink>
 
-        <NavLink to='/hello2' className={({isActive})=> isActive? "text-blue-700 underline" : ""}>My Groups</NavLink>
-
-
+        <NavLink to='/hello2' className={({ isActive }) => isActive ? "text-blue-700 underline" : ""}>My Groups</NavLink>
     </>
+
+    const handleLogOut = () => {
+        logout()
+    }
 
 
     return (
@@ -46,8 +50,21 @@ const Header = () => {
                     </div>
                 </ul>
             </div>
-            <div className="navbar-end">
-                <a className="btn">Button</a>
+            <div className="navbar-end space-x-3">
+                {
+                    user ?
+                        <>
+                            <div className="relative group">
+                                <img src={user?.photoURL} className="w-10 h-10 rounded-full border border-blue-500 cursor-pointer" />
+                                <div className="absolute left-0 mt-1 hidden group-hover:block bg-white text-sm shadow px-3 py-1 rounded">
+                                    {user?.displayName}
+                                </div>
+                            </div>
+                            <button onClick={handleLogOut} className="btn">Logout</button>
+                        </>
+                        :
+                        <Link to='/login' className="btn">Login</Link>
+                }
             </div>
         </div>
     );

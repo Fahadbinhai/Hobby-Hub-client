@@ -10,7 +10,7 @@ const AllGroupSingleCard = ({ data }) => {
 
 
     return (
-        <div className="card bg-[#FFF7ED] w-[400px] lg:w-[500px] lg:h-[350px] mx-auto shadow-sm">
+        <div className="card bg-[#FFF7ED] w-[400px] lg:w-[500px] lg:h-[450px] mx-auto shadow-sm">
             <figure>
                 <img
                     src={photo}

@@ -7,6 +7,8 @@ import HomePage from '../Pages/HomePage';
 import FeatureDetails from '../Pages/FeatureDetails/FeatureDetails';
 import CreateHobbyGroup from '../Pages/CreateHobbyGroup/CreateHobbyGroup';
 import AllGroups from '../Pages/AllGroups/AllGroups';
+import Login from '../Pages/Login/Login';
+import Register from '../Pages/Register/Register';
 
 const router = createBrowserRouter([
   {
@@ -30,6 +32,14 @@ const router = createBrowserRouter([
         path: 'all-group',
         Component: AllGroups,
         loader: () => fetch('http://localhost:3000/hobbies')
+      },
+      {
+        path:'login',
+        Component: Login
+      },
+      {
+        path:'register',
+        Component: Register
       }
     ]
   },
