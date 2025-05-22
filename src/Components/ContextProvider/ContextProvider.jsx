@@ -1,5 +1,5 @@
 import React, { createContext, useEffect, useState } from 'react';
-import { createUserWithEmailAndPassword, getAuth, onAuthStateChanged, signInWithEmailAndPassword, signOut, updateProfile } from "firebase/auth";
+import { createUserWithEmailAndPassword, getAuth, GoogleAuthProvider, onAuthStateChanged, signInWithEmailAndPassword, signInWithPopup, signOut, updateProfile } from "firebase/auth";
 import { app } from '../../Firebase/Firebase.config';
 import Swal from 'sweetalert2';
 
@@ -9,9 +9,34 @@ import Swal from 'sweetalert2';
 
 export const AuthContext = createContext();
 const auth = getAuth(app);
+const provider = new GoogleAuthProvider();
 
 const ContextProvider = ({ children }) => {
     const [user, setUser] = useState(null);
+
+    // google signIn
+
+    const googleLogin = () => {
+        signInWithPopup(auth, provider)
+            .then((result) => {
+                const user = result.user
+
+
+                Swal.fire({
+                    position: "top-end",
+                    icon: "success",
+                    title: `${user.displayName} Logged in successfully`,
+                    showConfirmButton: false,
+                    timer: 1500
+                });
+            })
+            .then((error) => {
+                console.log(error)
+            })
+    }
+
+
+
 
     // create a new user 
 
@@ -69,7 +94,7 @@ const ContextProvider = ({ children }) => {
                     timer: 1500
                 });
             })
-            .then((error)=>{
+            .then((error) => {
                 console.log(error)
             })
     }
@@ -79,7 +104,8 @@ const ContextProvider = ({ children }) => {
         register,
         user,
         login,
-        logout
+        logout,
+        googleLogin
 
     }
 
