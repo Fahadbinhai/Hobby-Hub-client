@@ -16,6 +16,8 @@ const Login = () => {
         // console.log(email, password)
 
         login(email, password)
+        form.reset()
+
 
     }
 

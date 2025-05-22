@@ -23,7 +23,7 @@ const ContextProvider = ({ children }) => {
 
 
                 Swal.fire({
-                    position: "top-end",
+                    position: "middle",
                     icon: "success",
                     title: `${user.displayName} Logged in successfully`,
                     showConfirmButton: false,
@@ -65,6 +65,14 @@ const ContextProvider = ({ children }) => {
         signInWithEmailAndPassword(auth, email, password)
             .then(() => {
                 // const currentUser = user.user;
+                Swal.fire({
+                    position: "middle",
+                    icon: "success",
+                    title: 'Logged in successfully',
+                    showConfirmButton: false,
+                    timer: 1500
+                })
+
             })
             .then((error) => {
                 console.log(error)

@@ -60,10 +60,10 @@ const Header = () => {
                                     {user?.displayName}
                                 </div>
                             </div>
-                            <button onClick={handleLogOut} className="btn">Logout</button>
+                            <button onClick={handleLogOut} className="btn bg-red-400">Logout</button>
                         </>
                         :
-                        <Link to='/login' className="btn">Login</Link>
+                        <Link to='/login' className="btn bg-blue-400">Login</Link>
                 }
             </div>
         </div>
