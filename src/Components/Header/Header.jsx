@@ -15,7 +15,7 @@ const Header = () => {
 
         <NavLink to='/new-hobby-group' className={({ isActive }) => isActive ? "text-blue-700 underline" : ""}>Create Groups</NavLink>
 
-        <NavLink to='/hello2' className={({ isActive }) => isActive ? "text-blue-700 underline" : ""}>My Groups</NavLink>
+        <NavLink to='/my-groups' className={({ isActive }) => isActive ? "text-blue-700 underline" : ""}>My Groups</NavLink>
     </>
 
     const handleLogOut = () => {
@@ -56,7 +56,7 @@ const Header = () => {
                         <>
                             <div className="relative group">
                                 <img src={user?.photoURL} className="w-10 h-10 rounded-full border border-blue-500 cursor-pointer" />
-                                <div className="absolute left-0 mt-1 hidden group-hover:block bg-white text-sm shadow px-3 py-1 rounded">
+                                <div className="absolute left-0 mt-1 hidden group-hover:block bg-white text-sm shadow px-3 py-1 w-[100px] rounded">
                                     {user?.displayName}
                                 </div>
                             </div>

@@ -8,7 +8,7 @@ const FeatureDetails = () => {
 
     const singleData = useLoaderData();
 
-    const { name, photo, meeting, description, lastDate, members,start,user,email } = singleData
+    const { name,hobby, photo, meeting, description, lastDate, members,start,user,email } = singleData
 
     console.log(singleData)
 
@@ -26,6 +26,7 @@ const FeatureDetails = () => {
             </figure>
             <div className="card-body">
                 <h2 className="card-title"> {name} </h2>
+                <p> Category: {hobby} </p>
                 <p> Maximum Members: {members} </p>
                 <p> Location: {meeting} </p>
                 <p> Details: {description} </p>

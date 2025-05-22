@@ -9,6 +9,7 @@ import CreateHobbyGroup from '../Pages/CreateHobbyGroup/CreateHobbyGroup';
 import AllGroups from '../Pages/AllGroups/AllGroups';
 import Login from '../Pages/Login/Login';
 import Register from '../Pages/Register/Register';
+import MyGroups from '../Pages/MyGroups/MyGroups';
 
 const router = createBrowserRouter([
   {
@@ -40,6 +41,10 @@ const router = createBrowserRouter([
       {
         path:'register',
         Component: Register
+      },
+      {
+        path:'my-groups',
+        Component:MyGroups
       }
     ]
   },

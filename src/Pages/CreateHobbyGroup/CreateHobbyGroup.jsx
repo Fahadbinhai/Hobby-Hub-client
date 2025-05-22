@@ -1,7 +1,11 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import Swal from 'sweetalert2';
+import { AuthContext } from '../../Components/ContextProvider/ContextProvider';
 
 const CreateHobbyGroup = () => {
+
+    const { user } = useContext(AuthContext)
+    console.log(user)
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -33,87 +37,87 @@ const CreateHobbyGroup = () => {
         })
             .then(res => res.json())
             .then(data => {
-            if (data.insertedId) {
-            Swal.fire({
-                position: "top-end",
-                icon: "success",
-                title: "Your work has been saved",
-                showConfirmButton: false,
-                timer: 1500
-            });
-        }
-        // console.log('after adding data to data base', data)
-    })
+                if (data.insertedId) {
+                    Swal.fire({
+                        position: "middle",
+                        icon: "success",
+                        title: "Your group has been created successfully",
+                        showConfirmButton: false,
+                        timer: 1500
+                    });
+                }
+                // console.log('after adding data to data base', data)
+            })
 
     }
 
 
 
 
-return (
-    <div className='my-16'>
-        <h3 className='text-center font-bold text-3xl'>Complete the form to start your hobby group</h3>
-        <form className='border p-5 my-10' onSubmit={handleSubmit}>
+    return (
+        <div className='my-16'>
+            <h3 className='text-center font-bold text-3xl'>Complete the form to start your hobby group</h3>
+            <form className='border p-5 my-10' onSubmit={handleSubmit}>
 
-            <p className="label mb-2">Enter Group Name</p>
-            <input type="text" name='name' required placeholder="Group Name" className="input w-full mb-2 " />
-            <br />
+                <p className="label mb-2">Enter Group Name</p>
+                <input type="text" name='name' required placeholder="Group Name" className="input w-full mb-2 " />
+                <br />
 
-            <p className="label mb-2">Hobby Category</p>
-            {/* <input type="text" placeholder="Type here" className="input w-full " /> */}
+                <p className="label mb-2">Hobby Category</p>
+                {/* <input type="text" placeholder="Type here" className="input w-full " /> */}
 
-            <select id="hobby" required name="hobby" className="select select-bordered w-full mb-2">
-                <option value="">-- Choose one --</option>
-                <option value="hiking">Hiking</option>
-                <option value="painting">Painting</option>
-                <option value="photography">Photography</option>
-                <option value="VideoGaming">Video Gaming</option>
-                <option value="Fishing">Fishing</option>
-                <option value="Running">Running</option>
-                <option value="Cooking">Cooking</option>
-                <option value="Reading">Reading</option>
-                <option value="Writing">Writing </option>
-                <option value="Eating">Eating </option>
-            </select>
+                <select id="hobby" required name="hobby" className="select select-bordered w-full mb-2">
+                    <option value="">-- Choose one --</option>
+                    <option value="hiking">Hiking</option>
+                    <option value="painting">Painting</option>
+                    <option value="photography">Photography</option>
+                    <option value="VideoGaming">Video Gaming</option>
+                    <option value="Fishing">Fishing</option>
+                    <option value="Running">Running</option>
+                    <option value="Cooking">Cooking</option>
+                    <option value="Reading">Reading</option>
+                    <option value="Writing">Writing </option>
+                    <option value="Eating">Eating </option>
+                </select>
 
-            <br />
+                <br />
 
-            <p className="label mb-2">Description</p>
-            <input type="text" required name='description' placeholder="Description" className="input w-full mb-2 h-12" />
-            <br />
+                <p className="label mb-2">Description</p>
+                <input type="text" required name='description' placeholder="Description" className="input w-full mb-2 h-12" />
+                <br />
 
-            <p className="label mb-2">Meeting Location</p>
-            <input type="text" required name='meeting' placeholder="Meeting Location" className="input w-full mb-2 " />
-            <br />
+                <p className="label mb-2">Meeting Location</p>
+                <input type="text" required name='meeting' placeholder="Meeting Location" className="input w-full mb-2 " />
+                <br />
 
-            <p className="label mb-2">Max Members</p>
-            <input type="text" required name='members' placeholder="Max Members" className="input w-full mb-2 " />
-            <br />
+                <p className="label mb-2">Max Members</p>
+                <input type="text" required name='members' placeholder="Max Members" className="input w-full mb-2 " />
+                <br />
 
-            <p className="label mb-2">Starting Date</p>
-            <input type="text" required name='start' placeholder="Starting Date" className="input w-full mb-2 " />
-            <br />
+                <p className="label mb-2">Starting Date</p>
+                <input type="text" required name='start' placeholder="Starting Date" className="input w-full mb-2 " />
+                <br />
 
-            <p className="label mb-2">Last date of joining</p>
-            <input type="text" required name='lastDate' placeholder="Last date of joining" className="input w-full mb-2 " />
-            <br />
+                <p className="label mb-2">Last date of joining</p>
+                <input type="text" required name='lastDate' placeholder="Last date of joining" className="input w-full mb-2 " />
+                <br />
 
-            <p className="label mb-2">Group Logo URL</p>
-            <input type="text" required name='photo' placeholder="URL" className="input w-full mb-2 " />
-            <br />
+                <p className="label mb-2">Group Logo URL</p>
+                <input type="text" required name='photo' placeholder="URL" className="input w-full mb-2 " />
+                <br />
 
-            <p className="label mb-2">User Name</p>
-            <input type="text" required name='user' placeholder="User Name" className="input w-full mb-2 " />
-            <br />
+                <p className="label mb-2">User Name</p>
+                <input type="text" required name='user' value={user?.displayName} placeholder="User Name" className="input w-full mb-2 " />
+                <br />
 
-            <p className="label mb-2">User Email</p>
-            <input type="text" required name='email' placeholder="User Email" className="input w-full mb-2 " />
-            <br />
+                <p className="label mb-2">User Email</p>
+                <input type="text" required name='email' value={user?.email} placeholder="User Email" className="input w-full mb-2 " />
+                <br />
 
-            <button className='btn btn-primary w-full mt-3' type="submit">Submit</button>
-        </form>
-    </div>
-);
+                <button className='btn btn-primary w-full mt-3' type="submit">Submit</button>
+            </form>
+        </div>
+    );
 };
 
 export default CreateHobbyGroup;

@@ -63,7 +63,7 @@ const ContextProvider = ({ children }) => {
 
     const login = (email, password) => {
         signInWithEmailAndPassword(auth, email, password)
-            .then((user) => {
+            .then(() => {
                 // const currentUser = user.user;
             })
             .then((error) => {
@@ -87,7 +87,7 @@ const ContextProvider = ({ children }) => {
         signOut(auth)
             .then(() => {
                 Swal.fire({
-                    position: "top-end",
+                    position: "middle",
                     icon: "success",
                     title: "You have Logout Successfully",
                     showConfirmButton: false,
