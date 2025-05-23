@@ -51,7 +51,7 @@ const MyGroups = () => {
                     <p className="text-center text-gray-500">No groups created yet.</p>
                 ) : (
                     <>
-                        {/* ✅ Table view for large screen */}
+                        
                         <div className="hidden md:block overflow-x-auto">
                             <table className="table w-full border">
                                 <thead>
