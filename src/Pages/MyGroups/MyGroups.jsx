@@ -42,6 +42,10 @@ const MyGroups = () => {
         }
     }, [user]);
 
+     useEffect(() => {
+            document.title = 'HobbyHuB || MyGroups';
+        }, []);
+
     return (
         <div className="p-5">
             <h2 className="text-2xl font-bold mb-4 text-center">My Created Hobby Groups</h2>

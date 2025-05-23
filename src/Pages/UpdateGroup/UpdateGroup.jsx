@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, useEffect } from 'react';
 import { AuthContext } from '../../Components/ContextProvider/ContextProvider';
 import { useLoaderData } from 'react-router';
 import Swal from 'sweetalert2';
@@ -51,6 +51,9 @@ const UpdateGroup = () => {
 
     }
 
+     useEffect(() => {
+            document.title = 'HobbyHuB || UpdateGroup';
+        }, []);
 
     return (
         <div className='my-16'>

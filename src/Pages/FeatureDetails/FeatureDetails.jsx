@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useLoaderData, useParams } from 'react-router';
 import moment from 'moment';
 
@@ -13,6 +13,11 @@ const FeatureDetails = () => {
     console.log(singleData)
 
     const isExpired = moment().isAfter(moment(lastDate, "DD-MM-YYYY"));
+
+
+     useEffect(() => {
+            document.title = 'HobbyHuB || FeatureDetails';
+        }, []);
 
 
 

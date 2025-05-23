@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, useEffect } from 'react';
 import Swal from 'sweetalert2';
 import { AuthContext } from '../../Components/ContextProvider/ContextProvider';
 
@@ -52,6 +52,9 @@ const CreateHobbyGroup = () => {
     }
 
 
+     useEffect(() => {
+            document.title = 'HobbyHuB || CreateHobbyGroup';
+        }, []);
 
 
     return (

@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, useEffect } from 'react';
 import { Link, useNavigate } from 'react-router';
 import { AuthContext } from '../../Components/ContextProvider/ContextProvider';
 
@@ -31,6 +31,9 @@ const Login = () => {
     }
 
 
+     useEffect(() => {
+            document.title = 'HobbyHuB || Login';
+        }, []);
 
     return (
         <div className="w-full max-w-md p-4 rounded-md shadow sm:p-8 dark:bg-blue-100 dark:text-gray-800 mx-auto my-30">

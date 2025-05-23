@@ -26,6 +26,11 @@ const HomePage = () => {
     }, [])
 
 
+     useEffect(() => {
+            document.title = 'HobbyHuB || Home';
+        }, []);
+
+
     return (
         <div>
             {/* slider */}

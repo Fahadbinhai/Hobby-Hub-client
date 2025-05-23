@@ -1,4 +1,4 @@
-import React, { Suspense } from 'react';
+import React, { Suspense, useEffect } from 'react';
 import { useLoaderData } from 'react-router';
 import AllGroupSingleCard from '../../Components/AllGroupSingleCard/AllGroupSingleCard';
 import { Fade, Slide, Zoom } from "react-awesome-reveal";
@@ -7,6 +7,10 @@ const AllGroups = () => {
 
     const allData = useLoaderData();
     console.log(allData)
+
+    useEffect(() => {
+        document.title = 'HobbyHuB || AllGroups';
+    }, []);
 
 
     return (
