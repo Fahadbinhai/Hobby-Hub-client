@@ -28,6 +28,8 @@ const Login = () => {
 
     const handleGoogleLogin = () => {
         googleLogin()
+
+        navigate('/')
     }
 
 

@@ -7,6 +7,7 @@ import Swal from 'sweetalert2';
 
 
 
+
 export const AuthContext = createContext();
 const auth = getAuth(app);
 const provider = new GoogleAuthProvider();
@@ -29,6 +30,9 @@ const ContextProvider = ({ children }) => {
                     showConfirmButton: false,
                     timer: 1500
                 });
+
+               
+
             })
             .catch((error) => {
                 if (error) {
