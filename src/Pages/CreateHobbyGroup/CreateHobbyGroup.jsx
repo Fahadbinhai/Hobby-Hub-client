@@ -28,7 +28,7 @@ const CreateHobbyGroup = () => {
 
         // sending data to database
 
-        fetch('http://localhost:3000/hobbies', {
+        fetch('https://assignment-10-hobby-server.vercel.app/hobbies', {
             method: "POST",
             headers: {
                 'Content-type': 'application/json'

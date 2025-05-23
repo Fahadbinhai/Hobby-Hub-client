@@ -20,7 +20,7 @@ const HomePage = () => {
     console.log(featured)
 
     useEffect(() => {
-        fetch('http://localhost:3000/hobbies')
+        fetch('https://assignment-10-hobby-server.vercel.app/hobbies')
             .then(res => res.json())
             .then(data => setFeatured(data))
     }, [])

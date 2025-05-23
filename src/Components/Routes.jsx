@@ -30,7 +30,7 @@ const router = createBrowserRouter([
         element: <PrivateRoute>
           <FeatureDetails></FeatureDetails>
         </PrivateRoute>,
-        loader: ({ params }) => fetch(`http://localhost:3000/hobbies/${params.id}`)
+        loader: ({ params }) => fetch(`https://assignment-10-hobby-server.vercel.app/hobbies/${params.id}`)
       },
       {
         path: 'new-hobby-group',
@@ -42,7 +42,7 @@ const router = createBrowserRouter([
       {
         path: 'all-group',
         Component: AllGroups,
-        loader: () => fetch('http://localhost:3000/hobbies')
+        loader: () => fetch('https://assignment-10-hobby-server.vercel.app/hobbies')
       },
       {
         path: 'login',
@@ -65,7 +65,7 @@ const router = createBrowserRouter([
         element: <PrivateRoute>
           <UpdateGroup></UpdateGroup>
         </PrivateRoute>,
-        loader: ({ params }) => fetch(`http://localhost:3000/hobbies/${params.id}`)
+        loader: ({ params }) => fetch(`https://assignment-10-hobby-server.vercel.app/hobbies/${params.id}`)
 
       }
     ]

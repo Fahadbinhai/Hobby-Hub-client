@@ -18,7 +18,7 @@ const MyGroups = () => {
             confirmButtonText: "Yes, delete it!"
         }).then((result) => {
             if (result.isConfirmed) {
-                fetch(`http://localhost:3000/hobbies/${id}`, {
+                fetch(`https://assignment-10-hobby-server.vercel.app/hobbies/${id}`, {
                     method: 'DELETE'
                 })
                     .then(res => res.json())
@@ -36,7 +36,7 @@ const MyGroups = () => {
 
     useEffect(() => {
         if (user?.email) {
-            fetch(`http://localhost:3000/myGroup/${user.email}`)
+            fetch(`https://assignment-10-hobby-server.vercel.app/myGroup/${user.email}`)
                 .then(res => res.json())
                 .then(data => setMyGroups(data));
         }

@@ -28,7 +28,7 @@ const UpdateGroup = () => {
 
         // sending data 
 
-        fetch(`http://localhost:3000/hobbies/${_id}`, {
+        fetch(`https://assignment-10-hobby-server.vercel.app/hobbies/${_id}`, {
             method: 'PUT',
             headers: {
                 "content-type": "application/json"
