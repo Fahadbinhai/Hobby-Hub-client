@@ -24,12 +24,18 @@ const router = createBrowserRouter([
       },
       {
         path: 'feature-details/:id',
-        Component: FeatureDetails,
+        // Component: FeatureDetails,
+        element: <PrivateRoute>
+          <FeatureDetails></FeatureDetails>
+        </PrivateRoute>,
         loader: ({ params }) => fetch(`http://localhost:3000/hobbies/${params.id}`)
       },
       {
         path: 'new-hobby-group',
-        Component: CreateHobbyGroup
+        // Component: CreateHobbyGroup
+        element: <PrivateRoute>
+          <CreateHobbyGroup></CreateHobbyGroup>
+        </PrivateRoute>
       },
       {
         path: 'all-group',
