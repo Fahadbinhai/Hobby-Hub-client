@@ -1,11 +1,12 @@
 import React, { useContext } from 'react';
-import { Link } from 'react-router';
+import { Link, useNavigate } from 'react-router';
 import { AuthContext } from '../../Components/ContextProvider/ContextProvider';
 import Swal from 'sweetalert2';
 
 const Register = () => {
 
     const { register } = useContext(AuthContext)
+    const navigate = useNavigate()
 
 
     const handleRegister = (e) => {
@@ -29,6 +30,7 @@ const Register = () => {
             timer: 1500
         });
 
+        navigate('/')
 
 
 
@@ -37,7 +39,7 @@ const Register = () => {
 
 
     return (
-        <div className="w-full max-w-md p-4 rounded-md shadow sm:p-8 dark:bg-blue-100 dark:text-gray-800 mx-auto mt-7">
+        <div className="w-full max-w-md p-4 rounded-md shadow sm:p-8 dark:bg-blue-100 dark:text-gray-800 mx-auto my-30">
             <h2 className="mb-3 text-3xl font-semibold text-center">Create an Account</h2>
             <p className="text-sm text-center dark:text-gray-600">Don't have account?
                 <Link to='/login' className='underline text-blue-500'> Login </Link>
@@ -72,7 +74,7 @@ const Register = () => {
                     </div>
                     <div className="space-y-2">
                         <label htmlFor="email" className="block text-sm">Password</label>
-                        <input type="password" name="password" id="password" placeholder="Enter your password" className="w-full px-3 py-2 border rounded-md dark:border-gray-300 dark:bg-gray-50 dark:text-gray-800 focus:dark:border-violet-600" />
+                        <input type="password" name="password" id="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}" title="Must be more than 6 characters, including number, lowercase letter, uppercase letter" placeholder="Enter your password" className="w-full px-3 py-2 border rounded-md dark:border-gray-300 dark:bg-gray-50 dark:text-gray-800 focus:dark:border-violet-600" />
                     </div>
                 </div>
                 <button type="submit" className="w-full px-8 py-3 font-semibold rounded-md dark:bg-violet-600 dark:text-gray-50">Register</button>

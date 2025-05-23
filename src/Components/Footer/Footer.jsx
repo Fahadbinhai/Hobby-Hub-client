@@ -3,7 +3,7 @@ import footerLogo from '../../assets/images/hobby-hub-logo.png'
 
 const Footer = () => {
     return (
-        <footer className="footer sm:footer-horizontal bg-neutral text-neutral-content p-10 mx-auto">
+        <footer className="footer sm:footer-horizontal bg-neutral text-neutral-content p-10 mx-auto mt-4">
             <aside>
                 <img className='w-8 h-8 lg:w-18 lg:h-18 rounded' src={footerLogo} alt="" />
                 <p>

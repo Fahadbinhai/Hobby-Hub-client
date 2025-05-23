@@ -7,6 +7,13 @@ import { FaHandPointRight } from "react-icons/fa";
 const HomePage = () => {
 
     const [featured, setFeatured] = useState([]);
+    
+
+
+    
+
+    
+
 
     console.log(featured)
 
@@ -28,7 +35,7 @@ const HomePage = () => {
                 <div className='grid grid-cols-1 lg:grid-cols-3 gap-4 my-5 lg:ml-8 '>
 
                     {
-                        featured.map(feature => (
+                        featured.slice(0, 6).map(feature => (
                             <Suspense fallback={<span className="loading loading-dots loading-xl"></span>}>
                                 <FeaturedCard key={feature._id} feature={feature}></FeaturedCard>
                             </Suspense>

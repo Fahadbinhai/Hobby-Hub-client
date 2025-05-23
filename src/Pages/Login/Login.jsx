@@ -1,10 +1,11 @@
 import React, { useContext } from 'react';
-import { Link } from 'react-router';
+import { Link, useNavigate } from 'react-router';
 import { AuthContext } from '../../Components/ContextProvider/ContextProvider';
 
 const Login = () => {
 
     const { login, googleLogin } = useContext(AuthContext)
+    const navigate = useNavigate()
 
     const handleLogin = (e) => {
         e.preventDefault();
@@ -17,6 +18,8 @@ const Login = () => {
 
         login(email, password)
         form.reset()
+        navigate('/')
+
 
 
     }
@@ -30,7 +33,7 @@ const Login = () => {
 
 
     return (
-        <div className="w-full max-w-md p-4 rounded-md shadow sm:p-8 dark:bg-blue-100 dark:text-gray-800 mx-auto mt-7">
+        <div className="w-full max-w-md p-4 rounded-md shadow sm:p-8 dark:bg-blue-100 dark:text-gray-800 mx-auto my-30">
             <h2 className="mb-3 text-3xl font-semibold text-center">Login to your account</h2>
             <p className="text-sm text-center dark:text-gray-600">Don't have account?
                 <Link to='/register' className='underline text-blue-500'> Register </Link>

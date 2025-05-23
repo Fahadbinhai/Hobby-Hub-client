@@ -6,7 +6,7 @@ import { Outlet } from 'react-router';
 const MainPage = () => {
     return (
         <section className=' bg-[#F0F9FF]'>
-            <div className='lg:mx-[50px] py-5'>
+            <div className='lg:mx-[50px] py-2'>
 
                 <header>
                     <Header></Header>
@@ -17,7 +17,7 @@ const MainPage = () => {
                 </main>
 
                 <footer>
-                    {/* <Footer></Footer> */}
+                    <Footer></Footer>
                 </footer>
 
 

@@ -7,6 +7,7 @@ const Header = () => {
 
     const { user, logout } = useContext(AuthContext)
 
+
     const links = <>
 
         <NavLink to='/' className={({ isActive }) => isActive ? " underline text-blue-700" : ""}>Home</NavLink>
@@ -51,6 +52,7 @@ const Header = () => {
                 </ul>
             </div>
             <div className="navbar-end space-x-3">
+
                 {
                     user ?
                         <>
