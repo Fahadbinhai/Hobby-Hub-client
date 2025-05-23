@@ -30,8 +30,16 @@ const ContextProvider = ({ children }) => {
                     timer: 1500
                 });
             })
-            .then((error) => {
-                console.log(error)
+            .catch((error) => {
+                if (error) {
+                    Swal.fire({
+                        position: "middle",
+                        icon: "warning",
+                        title: 'Unable to login with Google',
+                        showConfirmButton: false,
+                        timer: 1500
+                    })
+                }
             })
     }
 
@@ -54,8 +62,16 @@ const ContextProvider = ({ children }) => {
                 })
                 console.log(currentUser)
             })
-            .then((error) => {
-                console.log(error)
+            .catch((error) => {
+                if (error) {
+                    Swal.fire({
+                        position: "middle",
+                        icon: "warning",
+                        title: 'Unable to register',
+                        showConfirmButton: false,
+                        timer: 1500
+                    })
+                }
             })
     }
 
@@ -74,8 +90,16 @@ const ContextProvider = ({ children }) => {
                 })
 
             })
-            .then((error) => {
-                console.log(error)
+            .catch((error) => {
+                if (error) {
+                    Swal.fire({
+                        position: "middle",
+                        icon: "warning",
+                        title: 'Unable to login',
+                        showConfirmButton: false,
+                        timer: 1500
+                    })
+                }
             })
     }
 
@@ -102,8 +126,16 @@ const ContextProvider = ({ children }) => {
                     timer: 1500
                 });
             })
-            .then((error) => {
-                console.log(error)
+            .catch((error) => {
+                if (error) {
+                    Swal.fire({
+                        position: "middle",
+                        icon: "success",
+                        title: "Unable to logout",
+                        showConfirmButton: false,
+                        timer: 1500
+                    });
+                }
             })
     }
 
