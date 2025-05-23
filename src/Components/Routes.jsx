@@ -12,11 +12,13 @@ import Register from '../Pages/Register/Register';
 import MyGroups from '../Pages/MyGroups/MyGroups';
 import UpdateGroup from '../Pages/UpdateGroup/UpdateGroup';
 import PrivateRoute from './PrivateRoute/PrivateRoute';
+import ErrorPage from './ErrorPage/ErrorPage';
 
 const router = createBrowserRouter([
   {
     path: "/",
     Component: MainPage,
+    errorElement: <ErrorPage></ErrorPage>,
     children: [
       {
         path: '/',
