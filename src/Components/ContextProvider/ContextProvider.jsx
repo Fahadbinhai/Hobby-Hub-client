@@ -64,7 +64,7 @@ const ContextProvider = ({ children }) => {
                     displayName: userName,
                     photoURL: photo
                 })
-                console.log(currentUser)
+                // console.log(currentUser)
             })
             .catch((error) => {
                 if (error) {

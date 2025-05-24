@@ -10,7 +10,7 @@ const FeatureDetails = () => {
 
     const { name,hobby, photo, meeting, description, lastDate, members,start,user,email } = singleData
 
-    console.log(singleData)
+    // console.log(singleData)
 
     const isExpired = moment().isAfter(moment(lastDate, "DD-MM-YYYY"));
 

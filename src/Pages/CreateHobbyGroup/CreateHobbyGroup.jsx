@@ -5,7 +5,7 @@ import { AuthContext } from '../../Components/ContextProvider/ContextProvider';
 const CreateHobbyGroup = () => {
 
     const { user } = useContext(AuthContext)
-    console.log(user)
+    // console.log(user)
 
     const handleSubmit = (e) => {
         e.preventDefault();

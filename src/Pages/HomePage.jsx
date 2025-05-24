@@ -17,7 +17,7 @@ const HomePage = () => {
 
 
 
-    console.log(featured)
+    // console.log(featured)
 
     useEffect(() => {
         fetch('https://assignment-10-hobby-server.vercel.app/hobbies')

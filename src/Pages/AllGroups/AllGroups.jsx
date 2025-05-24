@@ -6,7 +6,7 @@ import { Fade, Slide, Zoom } from "react-awesome-reveal";
 const AllGroups = () => {
 
     const allData = useLoaderData();
-    console.log(allData)
+    // console.log(allData)
 
     useEffect(() => {
         document.title = 'HobbyHuB || AllGroups';
