@@ -3,7 +3,7 @@
 HobbyHub is a community-driven platform that helps individuals discover, join, and create local hobby-based groups. Whether you're into painting, gaming, reading, or hiking – HobbyHub connects people through shared passions, making it easier to form meaningful connections offline.
 
 ### 🔗 Live Website:
-👉 [Visit HobbyHub Live](https://your-live-site-url.netlify.app)
+👉 [Visit HobbyHub Live](https://magnificent-swan-fa6058.netlify.app/)
 
 ---
 
@@ -32,26 +32,15 @@ HobbyHub is a community-driven platform that helps individuals discover, join, a
 
 ---
 
-## 🖼️ Screenshots
-
-> Add some beautiful screenshots of your homepage, group page, and login/registration.
-
----
-
 ## 🛠️ Technologies Used
 
 - React.js
 - Tailwind CSS
 - Firebase Auth
 - MongoDB & Express.js
-- React Router DOM
+- React Router
 - Lottie React
 - React Tooltip
 - React Awesome Reveal
 - React Toastify
 
----
-
-## 📚 Installation & Setup
-
-1. Clone the repository:
