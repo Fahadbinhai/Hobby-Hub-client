@@ -77,15 +77,15 @@ const router = createBrowserRouter([
         element: <DashBoard></DashBoard>,
         children:[
           {
-            path: '/dashboard/overview',
-            Component: OverView
+            index: true,
+            element: <OverView></OverView>
           },
           {
-            path: '/dashboard/usersGroup',
+            path: 'usersGroup',
             element: <UserCreateGroups></UserCreateGroups>
           },
           {
-            path: '/dashboard/allGroups',
+            path: 'allGroups',
             element: <AllGroupsTable></AllGroupsTable>
           }
         ]
