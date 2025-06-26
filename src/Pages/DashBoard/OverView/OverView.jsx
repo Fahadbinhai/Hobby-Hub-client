@@ -1,12 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import SingleColorPie from '../../../SingleColorPie/SingleColorPie';
 import { FaHandPointRight } from 'react-icons/fa';
-import { AuthContext } from '../../../Components/ContextProvider/ContextProvider';
 
 const OverView = () => {
 
     const [allData, setAllData] = useState([])
-    const [nameField, setNameField] = useState('')
+    const [nameField, setNameField] = useState([])
     const [loading, setLoading] = useState(true)
 
     useEffect(() => {
@@ -21,7 +20,7 @@ const OverView = () => {
 
     useEffect(() => {
 
-        fetch('http://localhost:3000/groupNames')
+        fetch('https://assignment-10-hobby-server.vercel.app/groupNames')
             .then(res => res.json())
             .then(group => setNameField(group))
 
@@ -35,14 +34,14 @@ const OverView = () => {
         )
     }
 
-    // console.log(user)
+    // console.log(nameField)
     return (
         <div className='grid grid-cols-1 md:grid-cols-10 gap-3'>
             <div className='col-span-5 h-[20rem]'>
 
                 <div className='bg-red-200 rounded-lg w-full h-full flex justify-around items-center p-5 mx-auto'>
                     <div className='text-medium font-semibold'>
-                        Total Hobby Groups : {allData.length}
+                        Total Hobby Groups : {allData?.length}
                     </div>
                     <div className='w-[200px]'>
                         <SingleColorPie></SingleColorPie>
@@ -56,7 +55,7 @@ const OverView = () => {
 
                     <div className='grid grid-cols-1 mt-4'>
                         {
-                            nameField.slice(0, 9).map((nam, index) => {
+                            nameField?.slice(0, 9).map((nam, index) => {
                                 return (
                                     <div className='ml-10' key={index}>
                                         <ul className='font-semibold'>

@@ -17,6 +17,7 @@ import DashBoard from '../Pages/DashBoard/DashBoard';
 import OverView from '../Pages/DashBoard/OverView/OverView';
 import UserCreateGroups from '../Pages/DashBoard/UserCreateGroups/UserCreateGroups';
 import AllGroupsTable from '../Pages/DashBoard/AllGroupsTable/AllGroupsTable';
+import UserDetails from '../Pages/DashBoard/UserDetails/UserDetails';
 
 const router = createBrowserRouter([
   {
@@ -87,6 +88,10 @@ const router = createBrowserRouter([
           {
             path: 'allGroups',
             element: <AllGroupsTable></AllGroupsTable>
+          },
+          {
+            path: 'userDetails',
+            element: <UserDetails></UserDetails>
           }
         ]
       }

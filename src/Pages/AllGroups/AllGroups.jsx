@@ -33,7 +33,7 @@ const AllGroups = () => {
 
     const handleSorting = () => {
 
-        fetch('http://localhost:3000/sortHobbies')
+        fetch('https://assignment-10-hobby-server.vercel.app/sortHobbies')
         .then(res=>res.json())
         .then(data=> setAllGroups(data))
 

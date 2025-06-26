@@ -28,7 +28,8 @@ const DashBoard = () => {
             >
                 <h2 className="text-lg font-semibold mb-4 mt-12">Menu</h2>
                 <ul className="space-y-2">
-                    <li><Link to="/dashboard/overview" className="text-blue-600">Overview</Link></li>
+                    <li><Link className="text-blue-600">Overview</Link></li>
+                    <li><Link to="/dashboard/userDetails" className="text-blue-600">User Details</Link></li>
                     <li><Link to="/dashboard/allGroups" className="text-blue-600">All Groups</Link></li>
                     <li><Link to="/dashboard/usersGroup" className="text-blue-600">Users Group</Link></li>
                 </ul>
