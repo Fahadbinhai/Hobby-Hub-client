@@ -21,6 +21,8 @@ const Header = () => {
                 <NavLink to='/new-hobby-group' className={({ isActive }) => isActive ? "btn btn-primary bg-white text-blue-500" : ""}>Create Groups</NavLink>
 
                 <NavLink to='/my-groups' className={({ isActive }) => isActive ? "btn btn-primary bg-white text-blue-500" : ""}>My Groups</NavLink>
+
+                <NavLink to='/dashboard' className={({ isActive }) => isActive ? "btn btn-primary bg-white text-blue-500" : ""}>DashBoard</NavLink>
             </>
         }
     </>

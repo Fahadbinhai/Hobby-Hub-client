@@ -13,6 +13,10 @@ import MyGroups from '../Pages/MyGroups/MyGroups';
 import UpdateGroup from '../Pages/UpdateGroup/UpdateGroup';
 import PrivateRoute from './PrivateRoute/PrivateRoute';
 import ErrorPage from './ErrorPage/ErrorPage';
+import DashBoard from '../Pages/DashBoard/DashBoard';
+import OverView from '../Pages/DashBoard/OverView/OverView';
+import UserCreateGroups from '../Pages/DashBoard/UserCreateGroups/UserCreateGroups';
+import AllGroupsTable from '../Pages/DashBoard/AllGroupsTable/AllGroupsTable';
 
 const router = createBrowserRouter([
   {
@@ -67,6 +71,24 @@ const router = createBrowserRouter([
         </PrivateRoute>,
         loader: ({ params }) => fetch(`https://assignment-10-hobby-server.vercel.app/hobbies/${params.id}`)
 
+      },
+      {
+        path: '/dashboard',
+        element: <DashBoard></DashBoard>,
+        children:[
+          {
+            path: '/dashboard/overview',
+            Component: OverView
+          },
+          {
+            path: '/dashboard/usersGroup',
+            element: <UserCreateGroups></UserCreateGroups>
+          },
+          {
+            path: '/dashboard/allGroups',
+            element: <AllGroupsTable></AllGroupsTable>
+          }
+        ]
       }
     ]
   },

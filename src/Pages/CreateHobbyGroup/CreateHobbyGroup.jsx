@@ -24,7 +24,8 @@ const CreateHobbyGroup = () => {
         const user = form.user.value;
         const email = form.email.value;
 
-        const groupDetails = { name, hobby, description, meeting, members, start, lastDate, photo, user, email }
+        const groupDetails = { name, hobby, description, meeting, members, start, lastDate, 
+            photo, user, email, createdAt : new Date() }
 
         // console.log(groupDetails)
 
