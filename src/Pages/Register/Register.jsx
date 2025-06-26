@@ -44,7 +44,7 @@ const Register = () => {
     return (
         <div className="w-full max-w-md p-4 rounded-md shadow sm:p-8 dark:bg-blue-100 dark:text-gray-800 mx-auto my-30">
             <h2 className="mb-3 text-3xl font-semibold text-center">Create an Account</h2>
-            <p className="text-sm text-center dark:text-gray-600">Don't have account?
+            <p className="text-sm text-center dark:text-gray-600">Already have an account?
                 <Link to='/login' className='underline text-blue-500'> Login </Link>
             </p>
             {/* <div className="my-6 space-y-4">

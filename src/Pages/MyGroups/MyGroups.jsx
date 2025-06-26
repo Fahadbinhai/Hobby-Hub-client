@@ -1,13 +1,15 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { AuthContext } from '../../Components/ContextProvider/ContextProvider';
-import { Link} from 'react-router';
+import { Link } from 'react-router';
 import Swal from 'sweetalert2';
 
 const MyGroups = () => {
     const { user } = useContext(AuthContext);
     const [myGroups, setMyGroups] = useState([]);
+    const [loader, setLoader] = useState(true)
 
     const handleDelete = (id) => {
+
         Swal.fire({
             title: "Are you sure?",
             text: "You won't be able to revert this!",
@@ -28,6 +30,7 @@ const MyGroups = () => {
                             // Filter out deleted item
                             const remaining = myGroups.filter(group => group._id !== id);
                             setMyGroups(remaining);
+
                         }
                     });
             }
@@ -35,16 +38,29 @@ const MyGroups = () => {
     };
 
     useEffect(() => {
+        setLoader(true)
         if (user?.email) {
             fetch(`https://assignment-10-hobby-server.vercel.app/myGroup/${user.email}`)
                 .then(res => res.json())
-                .then(data => setMyGroups(data));
+                .then(data => {
+                    setMyGroups(data)
+                    setLoader(false)
+                });
         }
+
     }, [user]);
 
-     useEffect(() => {
-            document.title = 'HobbyHuB || MyGroups';
-        }, []);
+    useEffect(() => {
+        document.title = 'HobbyHuB || MyGroups';
+    }, []);
+
+    if (loader) {
+        return (
+            <div className="flex justify-center items-center h-screen">
+                <span className="loading loading-dots loading-lg text-blue-500"></span>
+            </div>
+        )
+    }
 
     return (
         <div className="p-5">
@@ -55,7 +71,7 @@ const MyGroups = () => {
                     <p className="text-center text-gray-500">No groups created yet.</p>
                 ) : (
                     <>
-                        
+
                         <div className="hidden md:block overflow-x-auto">
                             <table className="table w-full border">
                                 <thead>

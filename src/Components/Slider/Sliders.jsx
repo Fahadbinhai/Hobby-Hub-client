@@ -44,31 +44,43 @@ const Sliders = () => {
 
 
     return (
-        <div className="slider-container max-w-full mx-auto my-8 px-4">
+        <div className='mt-5'>
             <SliderLib {...settings}>
-
-
-                
-                <div className="relative">
-                    <img src="https://i.ibb.co/XTwF7MV/travling.jpg" alt="pic1" className="w-full h-[300px] lg:h-[700px]" />
-                    <div className="absolute bottom-4 left-4 text-white text-xl bg-opacity-50 bg-black px-4 py-2">Hobby Traveling......!!!!</div>
+                <div className="relative h-[40vh] md:h-[40vh] lg:h-[70vh]">
+                    <img
+                        src="https://i.ibb.co/XhXNpD6/bookwarm.jpg"
+                        alt="pic1"
+                        className="w-full h-full object-cover"
+                    />
+                    <div className="absolute bottom-4 left-4 text-white text-xl bg-opacity-50 bg-black px-4 py-2">
+                        Hobby Reading......!!!!
+                    </div>
                 </div>
 
-
-                
-                <div className="relative">
-                    <img src="https://i.ibb.co/jkprFs6y/Reading-book.jpg" alt="pic2" className="w-full h-[300px] lg:h-[700px] " />
-                    <div className="absolute bottom-4 left-4 text-white text-xl bg-opacity-50 bg-black px-4 py-2">Hobby Reading......!!!!</div>
+                <div className="relative h-[40vh] md:h-[40vh] lg:h-[70vh]">
+                    <img
+                        src="https://i.ibb.co/jkprFs6y/Reading-book.jpg"
+                        alt="pic2"
+                        className="w-full h-full object-cover"
+                    />
+                    <div className="absolute bottom-4 left-4 text-white text-xl bg-opacity-50 bg-black px-4 py-2">
+                        Hobby Reading......!!!!
+                    </div>
                 </div>
 
-
-                
-                <div className="relative">
-                    <img src="https://i.ibb.co/rG51Z0jB/cooking.jpg" alt="pic3" className="w-full h-[300px] lg:h-[700px] " />
-                    <div className="absolute bottom-4 left-4 text-white text-xl bg-opacity-50 bg-black px-4 py-2">Hobby Cooking......!!!!</div>
+                <div className="relative h-[40vh] md:h-[40vh] lg:h-[70vh]">
+                    <img
+                        src="https://i.ibb.co/rG51Z0jB/cooking.jpg"
+                        alt="pic3"
+                        className="w-full h-full object-cover"
+                    />
+                    <div className="absolute bottom-4 left-4 text-white text-xl bg-opacity-50 bg-black px-4 py-2">
+                        Hobby Cooking......!!!!
+                    </div>
                 </div>
             </SliderLib>
         </div>
+
     );
 };
 

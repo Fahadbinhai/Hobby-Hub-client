@@ -14,6 +14,7 @@ const provider = new GoogleAuthProvider();
 
 const ContextProvider = ({ children }) => {
     const [user, setUser] = useState(null);
+    const [loading, setLoading] = useState(true)
 
     // google signIn
 
@@ -113,6 +114,8 @@ const ContextProvider = ({ children }) => {
     useEffect(() => {
         const unsubscribe = onAuthStateChanged(auth, currentUser => {
             setUser(currentUser);
+            setLoading(false)
+
         });
         return () => unsubscribe();
     }, []);
@@ -149,7 +152,8 @@ const ContextProvider = ({ children }) => {
         user,
         login,
         logout,
-        googleLogin
+        googleLogin,
+        loading
 
     }
 

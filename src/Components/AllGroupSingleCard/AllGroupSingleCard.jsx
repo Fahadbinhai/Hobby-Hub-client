@@ -6,15 +6,15 @@ const AllGroupSingleCard = ({ data }) => {
     const { _id, photo, name, meeting, description } = data;
 
     return (
-        <div className="card bg-[#FFF7ED] w-[350px] lg:w-[500px] lg:h-[450px] mx-auto shadow-sm">
-            <figure>
-                <img src={photo} alt="Hobby" />
+        <div className="card bg-[#FFF7ED] w-full h-[450px] mx-auto shadow-sm">
+            <figure className="h-[200px] overflow-hidden">
+                <img className="w-full h-full object-cover" src={photo} alt="Hobby" />
             </figure>
 
             <div className="card-body">
                 <h2 className="card-title"> {name} </h2>
-                <p> Location: {meeting} </p>
-                <p> Info: {description} </p>
+                <p> <span className='font-semibold'>Location:</span> {meeting} </p>
+                <p> <span className='font-semibold'>Info:</span> {description} </p>
             </div>
 
             <div className="card-actions justify-end m-5">

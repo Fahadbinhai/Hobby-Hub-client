@@ -26,23 +26,26 @@ const HomePage = () => {
     }, [])
 
 
-     useEffect(() => {
-            document.title = 'HobbyHuB || Home';
-        }, []);
+    useEffect(() => {
+        document.title = 'HobbyHuB || Home';
+    }, []);
 
 
     return (
         <div>
             {/* slider */}
             <Sliders></Sliders>
+            
+        
+            
 
             {/* featured section hobby */}
-            <div className='lg:border-2 my-4 rounded-lg mx-3 lg:bg-[#E0F2FE]'>
-                <h3 className='font-bold lg:font-extrabold text-xl lg:text-2xl lg:m-5 lg:pl-5'>Featured Group</h3>
-                <div className='grid grid-cols-1 lg:grid-cols-3 gap-4 my-5 lg:ml-8 '>
+            <div className=' mt-8 rounded-lg mx-3'>
+                <h3 className='font-bold lg:font-extrabold text-xl lg:text-2xl lg:m-5'>Featured Group</h3>
+                <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 px-4'>
 
                     {
-                        featured.slice(0, 6).map(feature => (
+                        featured.slice(0, 8).map(feature => (
                             <Fade key={feature._id}>
                                 <Suspense fallback={<span className="loading loading-dots loading-xl"></span>}>
                                     <FeaturedCard feature={feature} />
@@ -76,9 +79,9 @@ const HomePage = () => {
 
             <Slide>
                 <h3 className='font-bold text-2xl m-4'>Hobbies in Categories</h3>
-                <div className='grid grid-cols-1 lg:grid-cols-4 '>
+                <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2 '>
 
-                    <div className="card bg-[#FFF7ED] text-black w-96 border mx-auto mb-4">
+                    <div className="card bg-[#FFF7ED] text-black w-full border mx-auto mb-4">
                         <div className="card-body">
                             <h2 className="card-title"> Creative Hobbies</h2>
                             <p className='flex items-center gap-2'> <FaHandPointRight /> Drawing & Painting</p>
@@ -88,7 +91,8 @@ const HomePage = () => {
 
                         </div>
                     </div>
-                    <div className="card bg-[#FFF7ED] text-black w-96 border mx-auto mb-4">
+
+                    <div className="card bg-[#FFF7ED] text-black w-full border mx-auto mb-4">
                         <div className="card-body">
                             <h2 className="card-title"> Music & Performing Arts</h2>
                             <p className='flex items-center gap-2' > <FaHandPointRight /> Playing Guitar</p>
@@ -98,7 +102,8 @@ const HomePage = () => {
 
                         </div>
                     </div>
-                    <div className="card bg-[#FFF7ED] text-black w-96 border mx-auto mb-4">
+
+                    <div className="card bg-[#FFF7ED] text-black w-full border mx-auto mb-4">
                         <div className="card-body">
                             <h2 className="card-title"> Intellectual Hobbies</h2>
                             <p className='flex items-center gap-2' > <FaHandPointRight /> Reading Books</p>
@@ -108,7 +113,8 @@ const HomePage = () => {
 
                         </div>
                     </div>
-                    <div className="card bg-[#FFF7ED] text-black w-96 border mx-auto">
+
+                    <div className="card bg-[#FFF7ED] text-black w-full border mx-auto mb-4">
                         <div className="card-body">
                             <h2 className="card-title"> Health & Wellness</h2>
                             <p className='flex items-center gap-2' > <FaHandPointRight /> Yoga</p>
@@ -127,8 +133,8 @@ const HomePage = () => {
             <Slide>
                 <div>
                     <h3 className='font-bold text-2xl m-4'>A Quick Glance at Our Journey</h3>
-                    <div className='grid grid-cols-1 lg:grid-cols-4 gap-4'>
-                        <div className="card bg-[#FFF7ED] text-black w-96 border mx-auto">
+                    <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2'>
+                        <div className="card bg-[#FFF7ED] text-black w-full border mx-auto">
                             <div className="card-body">
                                 <h2 className="card-title"> Total Hobby Groups</h2>
                                 <p className='font-bold text-5xl m-4'>120+</p>
@@ -136,21 +142,21 @@ const HomePage = () => {
 
                             </div>
                         </div>
-                        <div className="card bg-[#FFF7ED] text-black w-96 border mx-auto">
+                        <div className="card bg-[#FFF7ED] text-black w-full border mx-auto">
                             <div className="card-body">
                                 <h2 className="card-title"> Active Members</h2>
                                 <p className='font-bold text-5xl m-4'>1020+</p>
                                 <p>	Who joined different groups</p>
                             </div>
                         </div>
-                        <div className="card bg-[#FFF7ED] text-black w-96 border mx-auto">
+                        <div className="card bg-[#FFF7ED] text-black w-full border mx-auto">
                             <div className="card-body">
                                 <h2 className="card-title"> Event Hosted</h2>
                                 <p className='font-bold text-5xl m-4'>90+</p>
                                 <p>	Offline/Online hobby meetups</p>
                             </div>
                         </div>
-                        <div className="card bg-[#FFF7ED] text-black w-96 border mx-auto">
+                        <div className="card bg-[#FFF7ED] text-black w-full border mx-auto">
                             <div className="card-body">
                                 <h2 className="card-title"> Hobbies Covered</h2>
                                 <p className='font-bold text-5xl m-4'>20+</p>

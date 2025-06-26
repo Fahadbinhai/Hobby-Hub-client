@@ -1,11 +1,13 @@
 import React, { useContext, useEffect } from 'react';
 import Swal from 'sweetalert2';
 import { AuthContext } from '../../Components/ContextProvider/ContextProvider';
+import { useNavigate } from 'react-router';
 
 const CreateHobbyGroup = () => {
 
     const { user } = useContext(AuthContext)
     // console.log(user)
+    const navigate = useNavigate()
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -47,6 +49,7 @@ const CreateHobbyGroup = () => {
                     });
                 }
                 // console.log('after adding data to data base', data)
+                navigate('/all-group')
             })
 
     }
@@ -59,7 +62,7 @@ const CreateHobbyGroup = () => {
 
     return (
         <div className='my-16'>
-            <h3 className='text-center font-bold text-3xl'>Complete the form to start your hobby group</h3>
+            <h3 className='text-center font-bold text-3xl'>Please provide the necessary details to create your hobby group</h3>
             <form className='border p-5 my-10' onSubmit={handleSubmit}>
 
                 <p className="label mb-2">Enter Group Name</p>

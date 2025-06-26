@@ -10,13 +10,19 @@ const Header = () => {
 
     const links = <>
 
-        <NavLink to='/' className={({ isActive }) => isActive ? " underline text-blue-700" : ""}>Home</NavLink>
 
-        <NavLink to='/all-group' className={({ isActive }) => isActive ? "text-blue-700 underline" : ""}>All Groups</NavLink>
+        <NavLink to='/' className={({ isActive }) => isActive ? "btn btn-primary bg-white text-blue-500" : ""}>Home</NavLink>
 
-        <NavLink to='/new-hobby-group' className={({ isActive }) => isActive ? "text-blue-700 underline" : ""}>Create Groups</NavLink>
+        <NavLink to='/all-group' className={({ isActive }) => isActive ? "btn btn-primary bg-white text-blue-500" : ""}>All Groups</NavLink>
 
-        <NavLink to='/my-groups' className={({ isActive }) => isActive ? "text-blue-700 underline" : ""}>My Groups</NavLink>
+        {
+            user &&
+            <>
+                <NavLink to='/new-hobby-group' className={({ isActive }) => isActive ? "btn btn-primary bg-white text-blue-500" : ""}>Create Groups</NavLink>
+
+                <NavLink to='/my-groups' className={({ isActive }) => isActive ? "btn btn-primary bg-white text-blue-500" : ""}>My Groups</NavLink>
+            </>
+        }
     </>
 
     const handleLogOut = () => {
@@ -25,7 +31,7 @@ const Header = () => {
 
 
     return (
-        <div className="navbar bg-[#E0F2FE] shadow-sm">
+        <div className="navbar bg-blue-500 text-white shadow-sm sticky top-0 z-50">
             <div className="navbar-start">
                 <div className="dropdown">
                     <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -33,7 +39,7 @@ const Header = () => {
                     </div>
                     <ul
                         tabIndex={0}
-                        className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
+                        className="menu menu-sm dropdown-content bg-base-100 text-black rounded-box z-1 mt-3 w-52 p-2 shadow">
                         {links}
                     </ul>
                 </div>
@@ -42,6 +48,7 @@ const Header = () => {
                     <h3 className="font-bold text-lg lg:text-2xl lg:ml-4">HobbyHuB</h3>
                 </div>
             </div>
+
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1">
                     <div className='flex flex-col lg:flex-row space-x-5 font-medium text-lg'>
@@ -51,6 +58,7 @@ const Header = () => {
                     </div>
                 </ul>
             </div>
+
             <div className="navbar-end space-x-3">
 
                 {
@@ -64,8 +72,12 @@ const Header = () => {
                             </div>
                             <button onClick={handleLogOut} className="btn bg-red-400">Logout</button>
                         </>
-                        :
-                        <Link to='/login' className="btn bg-blue-400">Login</Link>
+                        :<>
+                        <Link to='/login' className="btn bg-white">Login</Link>
+                        <Link to='/register' className="btn bg-white">Sign Up</Link>
+                        
+                        </>
+                        
                 }
             </div>
         </div>
