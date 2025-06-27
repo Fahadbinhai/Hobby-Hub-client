@@ -3,7 +3,7 @@
 HobbyHub is a community-driven platform that helps individuals discover, join, and create local hobby-based groups. Whether you're into painting, gaming, reading, or hiking – HobbyHub connects people through shared passions, making it easier to form meaningful connections offline.
 
 ### 🔗 Live Website:
-👉 [Visit HobbyHub Live](https://magnificent-swan-fa6058.netlify.app/)
+👉 [Visit HobbyHub Live](https://hobby-hub-ca344.web.app/)
 
 ---
 
