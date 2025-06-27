@@ -13,7 +13,7 @@ HobbyHub is a community-driven platform that helps individuals discover, join, a
 - 📌 **Create & Manage Groups**: Authenticated users can create, update, and delete hobby groups, including features like category selection, member limit, and meeting schedule.
 - 📄 **Group Details & Conditional Join**: Users can view group info and join if the start date hasn't passed. Otherwise, a warning is shown.
 - 🎯 **Private Routes with Role-Based Views**: Certain routes like "Create Group", "My Groups", and "Group Details" are protected and only accessible to logged-in users.
-- ✨ **Modern UI & Animations**: Implemented Lottie React animations, React Tooltip, and React Awesome Reveal for an interactive and engaging user experience.
+- ✨ **Modern UI & Animations**: Implemented React animations, React Tooltip, and React Awesome Reveal for an interactive and engaging user experience.
 
 ---
 
