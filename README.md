@@ -75,5 +75,5 @@ HobbyHub is a community-driven platform that helps individuals discover, join, a
 ## 📬 Feedback or Contributions
 
 Feel free to fork this repo or reach out for collaboration ideas!  
-🔗 [Your GitHub Profile](https://github.com/yourusername)
+🔗 [Your GitHub Profile](https://github.com/Fahadbinhai)
 
