@@ -25,9 +25,11 @@ HobbyHub is a community-driven platform that helps individuals discover, join, a
 | Page | Preview |
 |------|---------|
 | 🔐 Login Page | ![Login](assets/screenshots/login.png) |
-| 🏠 Home Page | ![Home](assets/screenshots/home.png) |
-| 🧩 Group Details | ![Group Details](assets/screenshots/group-details.png) |
-| 🛠️ Dashboard | ![Dashboard](assets/screenshots/dashboard.png) |
+| 🏠 Home Page | ![Home](https://i.ibb.co/B2syRx35/Screenshot-2025-06-27-063323.png) |
+| 🧩 Group Details | ![Group Details](https://i.ibb.co/xtQDRsJc/Screenshot-2025-06-27-063343.png) |
+| 🧩 Group Page | ![Other Details](https://i.ibb.co/9HpdN2qy/Screenshot-2025-06-27-063410.png) |
+| 🧩 Details | ![Group Details](https://i.ibb.co/DfVxmdBQ/Screenshot-2025-06-27-063519.png) |
+| 🛠️ Dashboard | ![Dashboard](https://i.ibb.co/DfVxmdBQ/Screenshot-2025-06-27-063519.png) |
 
 ---
 
